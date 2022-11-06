@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useContext } from "react";
 import ResumeContext, { useResumeContext } from "../context/ResumeContext";
+import Actions from "../organisms/Actions";
 
 import CvHeader from "../organisms/CvHeader";
 import Education from "../organisms/Education";
@@ -26,6 +27,7 @@ export default function Home() {
         twitter={resume.header.twitter}
         website={resume.header.website}
       />
+      <Actions />
       <Summary>{resume.summary}</Summary>
       <Skills
         technicalSkills={resume.skills.technicalSkills}

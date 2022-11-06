@@ -8,7 +8,11 @@
 }
 
 @media print {
+  @page {
+    margin: 20mm 20mm 20mm 20mm;
+  }
+
   html {
-    font-size: 80%;
+    font-size: 75%;
   }
 }

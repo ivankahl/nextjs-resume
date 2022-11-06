@@ -16,7 +16,7 @@ const ExperienceItem = (props: ExperienceItemProps) => {
   const singlePosition = props.positions.length === 1;
 
   return (
-    <div className="mb-8">
+    <div className="mb-8 break-before-all">
       <div className="flex flex-col items-start print:flex-row print:items-center sm:flex-row sm:items-center">
         <div className="flex flex-none flex-row items-center">
           <img
