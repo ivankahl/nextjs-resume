@@ -3,7 +3,7 @@ type Position = {
   startDate: string;
   endDate?: string;
   description: string | string[];
-  skills: string[];
+  skills?: string[];
 };
 
 export type ExperienceItemProps = {

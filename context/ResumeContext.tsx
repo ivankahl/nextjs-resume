@@ -1,6 +1,20 @@
 import { createContext, useContext } from "react";
+import { CvHeaderProps } from "../organisms/CvHeader";
+import { EducationProps } from "../organisms/Education";
+import { ExperienceProps } from "../organisms/Experience";
+import { ReferencesProps } from "../organisms/References";
+import { SkillsProps } from "../organisms/Skills";
 
-const ResumeContext = createContext({
+type ResumeContextType = {
+  header: CvHeaderProps;
+  summary: string;
+  skills: SkillsProps;
+  experience: ExperienceProps;
+  education: EducationProps;
+  references: ReferencesProps;
+};
+
+const ResumeContext = createContext<ResumeContextType>({
   header: {
     name: "Ivan Kahl",
     role: "Technical Lead",
@@ -146,58 +160,61 @@ const ResumeContext = createContext({
       },
     ],
   },
-  certifications: [
-    {
-      institution: {
-        name: "University of South Africa",
-        logoUrl: "img/Unisa.jpg",
+  education: {
+    certifications: [
+      {
+        institution: {
+          name: "University of South Africa",
+          logoUrl: "img/Unisa.jpg",
+        },
+        certification: "BSc in Informatics",
+        dateReceived: "December 2024",
+        description: ["Studying Part Time"],
       },
-      certification: "BSc in Informatics",
-      dateReceived: "December 2024",
-      description: ["Studying Part Time"],
-    },
-    {
-      institution: {
-        name: "Amazon Web Services",
-        logoUrl: "img/aws.jpg",
+      {
+        institution: {
+          name: "Amazon Web Services",
+          logoUrl: "img/aws.jpg",
+        },
+        certification: "AWS Certified Developer",
+        dateReceived: "December 2021",
+        description: [],
       },
-      certification: "AWS Certified Developer",
-      dateReceived: "December 2021",
-      description: [],
-    },
-    {
-      institution: {
-        name: "Amazon Web Services",
-        logoUrl: "img/aws.jpg",
+      {
+        institution: {
+          name: "Amazon Web Services",
+          logoUrl: "img/aws.jpg",
+        },
+        certification: "AWS Certified Cloud Practitioner",
+        dateReceived: "November 2020",
+        description: [],
       },
-      certification: "AWS Certified Cloud Practitioner",
-      dateReceived: "November 2020",
-      description: [],
-    },
-    {
-      institution: {
-        name: "Reddam House Bedfordview",
-        logoUrl: "img/Reddam.jpg",
+      {
+        institution: {
+          name: "Reddam House Bedfordview",
+          logoUrl: "img/Reddam.jpg",
+        },
+        certification: "Matric Certificate",
+        dateReceived: "December 2016",
+        description: [
+          "8 distinctions",
+          "School Dux Scholar of 2016",
+          "In Top 100 of IEB",
+        ],
       },
-      certification: "Matric Certificate",
-      dateReceived: "December 2016",
-      description: [
-        "8 distinctions",
-        "School Dux Scholar of 2016",
-        "In Top 100 of IEB",
-      ],
-    },
-    {
-      institution: {
-        name: "Dale Carnegie",
-        logoUrl: "img/DaleCarnegie.jpg",
+      {
+        institution: {
+          name: "Dale Carnegie",
+          logoUrl: "img/DaleCarnegie.jpg",
+        },
+        certification: "Generation NEXT",
+        dateReceived: "October 2015",
+        description: [],
       },
-      certification: "Generation NEXT",
-      dateReceived: "October 2015",
-      description: [],
-    },
-  ],
+    ],
+  },
   references: {
+    emailAddress: "hello@ivankahl.com",
     subject: "Request References",
     body: "Hi Ivan,\r\n\r\nI saw your resume and was wondering if you could provide me with references?\r\n\r\nKind regards,\r\n",
   },
