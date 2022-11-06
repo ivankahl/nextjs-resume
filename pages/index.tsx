@@ -28,9 +28,9 @@ export default function Home() {
         softSkills={resume.skills.softSkills}
       ></Skills>
       <Experience companies={resume.experience.companies}></Experience>
-      <Education certifications={resume.certifications}></Education>
+      <Education certifications={resume.education.certifications}></Education>
       <References
-        emailAddress={resume.header.emailAddress}
+        emailAddress={resume.references.emailAddress}
         subject={resume.references.subject}
         body={resume.references.body}
       />
