@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useContext } from "react";
 import ResumeContext, { useResumeContext } from "../context/ResumeContext";
 
@@ -13,6 +14,9 @@ export default function Home() {
 
   return (
     <div className="container mx-auto mt-8 max-w-4xl px-6 leading-6 print:mt-0 print:max-w-none print:px-0">
+      <Head>
+        <title>Ivan Kahl's Resume</title>
+      </Head>
       <CvHeader
         profilePictureUrl={resume.header.profilePictureUrl}
         name={resume.header.name}
