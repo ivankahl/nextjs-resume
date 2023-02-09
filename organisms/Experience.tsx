@@ -13,6 +13,7 @@ const Experience = (props: ExperienceProps) => {
       {props.companies.map((x, i) => (
         <ExperienceItem
           key={i}
+          companyUrl={x.companyUrl}
           companyLogoUrl={x.companyLogoUrl}
           companyName={x.companyName}
           positions={x.positions}

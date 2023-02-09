@@ -9,6 +9,7 @@ type Position = {
 export type ExperienceItemProps = {
   companyName: string;
   companyLogoUrl: string;
+  companyUrl?: string;
   positions: Position[];
 };
 
@@ -24,7 +25,20 @@ const ExperienceItem = (props: ExperienceItemProps) => {
             className="w-12 rounded-full border border-solid border-gray-200"
           />
           <div className="ml-6 ">
-            <h3 className="text-xl font-bold leading-5">{props.companyName}</h3>
+            <h3 className="text-xl font-bold leading-5">
+              {props.companyUrl ? (
+                <a
+                  href={props.companyUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:underline"
+                >
+                  {props.companyName}
+                </a>
+              ) : (
+                props.companyName
+              )}
+            </h3>
             {singlePosition ? (
               <p className="text-lg font-medium">{props.positions[0].role}</p>
             ) : null}
@@ -42,11 +56,13 @@ const ExperienceItem = (props: ExperienceItemProps) => {
       {singlePosition ? (
         <div className="ml-[4.5rem] mt-2">
           {typeof props.positions[0].description === "string" ? (
-            props.positions[0].description
-              .split("\n")
-              .map((y) => <p className="mb-3 text-justify">{y}</p>)
+            props.positions[0].description.split("\n").map((y) => (
+              <p className="mb-3 text-justify" key={y}>
+                {y}
+              </p>
+            ))
           ) : (
-            <ul className="ml-2 list-inside list-disc">
+            <ul className="ml-7 mb-3 list-outside list-disc">
               {props.positions[0].description.map((x) => (
                 <li key={x} className="text-justify">
                   {x}
@@ -80,11 +96,13 @@ const ExperienceItem = (props: ExperienceItemProps) => {
                     </p>
                   </div>
                   {typeof x.description === "string" ? (
-                    x.description
-                      .split("\n")
-                      .map((y) => <p className="mb-3 text-justify">{y}</p>)
+                    x.description.split("\n").map((y) => (
+                      <p className="mb-3 text-justify" key={y}>
+                        {y}
+                      </p>
+                    ))
                   ) : (
-                    <ul className="ml-2 list-inside list-disc">
+                    <ul className="ml-7 mb-3 list-outside list-disc">
                       {x.description.map((y) => (
                         <li key={y} className="text-justify">
                           {y}

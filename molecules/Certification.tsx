@@ -34,7 +34,7 @@ const Certification = (props: CertificationProps) => {
         {typeof props.description === "string" ? (
           <p className="text-justify">{props.description}</p>
         ) : (
-          <ul className="ml-2 list-inside list-disc">
+          <ul className="ml-7 list-outside list-disc">
             {props.description.map((x) => (
               <li key={x} className="text-justify">
                 {x}
