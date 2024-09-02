@@ -23,28 +23,32 @@ const ResumeContext = createContext<ResumeContextType>({
     website: "https://ivankahl.com",
     twitter: "@IvanKahl",
     github: "ivankahl",
-    profilePictureUrl: "/img/profile.jpg",
+    profilePictureUrl: "/img/profile-3.jpg",
   },
-  summary: `I am a software developer and technical team lead situated in South Africa eager to develop innovative solutions that enhance the
-  productivity and efficiency of various industries around the world. I am studying a BSc in Informatics at UNISA (University of South Africa) while developing the core system and integrations at Mercury. I also enjoy working on my own
-  personal projects to better my own skills`,
+  summary: `I've always wanted to build big, super cool systems and help others along the way. I love turning complex ideas into performant software using appropriate design patterns like Domain-Driven Design (DDD), Event-Driven Architecure (EDA), Ports and Adapters or even a straightforward minimal REST API. I strive to continue learning, whether it be new concepts, languages, frameworks or tools. As I learn, I love to share my learnings with others on my personal blog, and in blog posts I write for other companies as a freelance technical writer.`,
   skills: {
     technicalSkills: [
-      "C# (.NET Framework, .NET Core, .NET 5/6)",
+      "Software Architecture",
+      "Domain-Driven Design (DDD)",
+      "Event-Driven Architecture (EDA)",
+      "C# (.NET Framework, .NET Core, .NET 5+)",
       "ASP.NET Core",
-      "Blazor",
       "Microsoft SQL Server",
+      "PostgreSQL",
+      "Azure",
       "AWS",
       "REST Integration",
       "SOAP Integration",
       "FIX Integration",
+      "Azure DevOps",
       "GitHub CI/CD",
+      "Go",
       "NodeJS",
       "React",
       "Next.js",
       "TypeScript",
-      "WordPress",
       "Sage CRM",
+      "Salesforce",
     ],
     softSkills: [
       "Communication",
@@ -59,6 +63,36 @@ const ResumeContext = createContext<ResumeContextType>({
   },
   experience: {
     companies: [
+      {
+        companyLogoUrl: "/img/Alpha.png",
+        companyName: "Alpha International",
+        companyUrl: "https://alpha.org",
+        positions: [
+          {
+            role: "Senior Software Engineer (Technical Lead)",
+            startDate: "April 2023",
+            skills: [
+              "Domain-Driven Design",
+              "Event-Driven Architecture",
+              "Leadership",
+              "C#",
+              "Microsoft Azure",
+              "PostgreSQL",
+              "Azure DevOps",
+            ],
+            description: [
+              "Build and maintain our internal Identity Provider based on Duende",
+              "Design and build new platform services for other teams",
+              "Help maintain testing and deployment pipelines in Azure DevOps",
+              "Champion Domain-Driven Design and Event-Driven Architecture across internal teams",
+              "Planned and executed migration of services to a private network with NGINXaaS as a reverse proxy",
+              "Mentor other developers",
+              "Code review and feedback",
+              "Collaborate across teams to deliver new products",
+            ],
+          },
+        ],
+      },
       {
         companyLogoUrl: "/img/Mercury.jpg",
         companyName: "Mercury",
@@ -76,6 +110,7 @@ const ResumeContext = createContext<ResumeContextType>({
             ],
             role: "Technical Lead",
             startDate: "June 2022",
+            endDate: "March 2023",
             skills: [
               "Team Management",
               "Leadership",
@@ -184,7 +219,7 @@ const ResumeContext = createContext<ResumeContextType>({
           logoUrl: "img/Unisa.jpg",
         },
         certification: "BSc in Informatics",
-        dateReceived: "December 2024",
+        dateReceived: "December 2025",
         description: ["Studying Part Time"],
       },
       {

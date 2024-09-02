@@ -73,7 +73,14 @@ const ExperienceItem = (props: ExperienceItemProps) => {
           {props.positions[0].skills ? (
             <p className="mb-3">
               <span className="font-bold">Skills: </span>
-              {props.positions[0].skills.join(" · ")}
+              {props.positions[0].skills.map((s) => (
+                <div
+                  key={s}
+                  className="mx-1 mb-1 inline-block rounded-full bg-gray-100 px-2 py-1 text-sm"
+                >
+                  {s}
+                </div>
+              ))}
             </p>
           ) : null}
         </div>
@@ -113,7 +120,14 @@ const ExperienceItem = (props: ExperienceItemProps) => {
                   {x.skills ? (
                     <p className="mb-3">
                       <span className="font-bold">Skills: </span>
-                      {x.skills.join(" · ")}
+                      {x.skills.map((s) => (
+                        <div
+                          key={s}
+                          className="mx-1 mb-1 inline-block rounded-full bg-gray-100 px-2 py-1 text-sm"
+                        >
+                          {s}
+                        </div>
+                      ))}
                     </p>
                   ) : null}
                 </div>
